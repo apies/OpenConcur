@@ -41,8 +41,8 @@ class UploadsController < ApplicationController
       report_sum = report.to_a.inject(0.0){|result, charge| charge.amount + result}
       report_date = report.to_a.max_by {|charge| charge.date_of_charge} 
       report_charges = report.sort_by(&:date_of_charge)
-      cardmember_name = cardholder.to_s
-      Report.create(:user_id => 1, :cardholder => "Bob", :total_amount => report_sum, :report_date => report_date, :charges => report_charges )
+      cardmember_name = report.first.cardholder
+      Report.create(:user_id => 1, :cardholder => cardmember_name, :total_amount => report_sum, :report_date => report_date, :charges => report_charges )
     end
   end
   
