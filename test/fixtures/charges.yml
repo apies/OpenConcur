@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cardholder: MyString
+  date_of_charge: 2012-01-08
+  description: MyString
+  amount: 1.5
+  reference_number: MyString
+  air_route: MyString
+  air_traveler: MyString
+  user_id: 1
+  report_id: 1
+  billable: false
+  approved: false
+  business_purpose: MyString
+
+two:
+  cardholder: MyString
+  date_of_charge: 2012-01-08
+  description: MyString
+  amount: 1.5
+  reference_number: MyString
+  air_route: MyString
+  air_traveler: MyString
+  user_id: 1
+  report_id: 1
+  billable: false
+  approved: false
+  business_purpose: MyString

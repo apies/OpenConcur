@@ -1,0 +1,27 @@
+<h1>Listing reports</h1>
+
+<table>
+  <tr>
+    <th>Total amount</th>
+    <th>Report date</th>
+    <th>Cardholder</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reports.each do |report| %>
+  <tr>
+    <td><%= report.total_amount %></td>
+    <td><%= report.report_date %></td>
+    <td><%= report.cardholder %></td>
+    <td><%= link_to 'Show', report %></td>
+    <td><%= link_to 'Edit', edit_report_path(report) %></td>
+    <td><%= link_to 'Destroy', report, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Report', new_report_path %>

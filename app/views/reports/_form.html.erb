@@ -1,0 +1,65 @@
+<%= form_for(@report) do |f| %>
+  <% if @report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+      <% @report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :total_amount %><br />
+    <%= f.text_field :total_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :report_date %><br />
+    <%= f.date_select :report_date %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+
+   
+<div class = "field">
+     <%= f.fields_for :charges do |b| %>
+      <div class="field">
+	    <%= b.label :cardholder %><br />
+	    <%= b.text_field :cardholder %>
+	  </div>
+	  <div class="field">
+	    <%= b.label :date_of_charge %><br />
+	    <%= b.date_select :date_of_charge %>
+	  </div>
+	  <div class="field">
+	    <%= b.label :description %><br />
+	    <%= b.text_field :description %>
+	  </div>
+	  <div class="field">
+	    <%= b.label :amount %><br />
+	    <%= b.text_field :amount %>
+	  </div>
+	  <div class="field">
+	    <%= b.label :billable %><br />
+	    <%= b.check_box :billable %>
+	  </div>
+	  <div class="field">
+	    <%= b.label :approved %><br />
+	    <%= b.check_box :approved %>
+	  </div>
+	  <div class="field">
+	    <%= b.label :business_purpose %><br />
+	    <%= b.text_field :business_purpose %>
+      </div>
+     <% end %>
+   </div>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

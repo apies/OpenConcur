@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cardholder:</b>
+  <%= @charge.cardholder %>
+</p>
+
+<p>
+  <b>Date of charge:</b>
+  <%= @charge.date_of_charge %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @charge.description %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @charge.amount %>
+</p>
+
+<p>
+  <b>Reference number:</b>
+  <%= @charge.reference_number %>
+</p>
+
+<p>
+  <b>Air route:</b>
+  <%= @charge.air_route %>
+</p>
+
+<p>
+  <b>Air traveler:</b>
+  <%= @charge.air_traveler %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @charge.user_id %>
+</p>
+
+<p>
+  <b>Report:</b>
+  <%= @charge.report_id %>
+</p>
+
+<p>
+  <b>Billable:</b>
+  <%= @charge.billable %>
+</p>
+
+<p>
+  <b>Approved:</b>
+  <%= @charge.approved %>
+</p>
+
+<p>
+  <b>Business purpose:</b>
+  <%= @charge.business_purpose %>
+</p>
+
+
+<%= link_to 'Edit', edit_charge_path(@charge) %> |
+<%= link_to 'Back', charges_path %>
