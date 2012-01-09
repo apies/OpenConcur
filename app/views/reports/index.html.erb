@@ -1,27 +1,49 @@
 <h1>Listing reports</h1>
 
-<table>
-  <tr>
-    <th>Total amount</th>
-    <th>Report date</th>
-    <th>Cardholder</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<div id = "reportsListAll">
 <% @reports.each do |report| %>
-  <tr>
-    <td><%= report.total_amount %></td>
-    <td><%= report.report_date %></td>
-    <td><%= report.cardholder %></td>
-    <td><%= link_to 'Show', report %></td>
-    <td><%= link_to 'Edit', edit_report_path(report) %></td>
-    <td><%= link_to 'Destroy', report, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+	<h3><%= report.cardholder + " " + number_to_currency(report.total_amount)  %></h3>
+	<div>
+	<table>
+	  <tr>
+	    <th>Cardholder</th>
+	    <th>Date of charge</th>
+	    <th>Description</th>
+	    <th>Amount</th>
+	    <th>Reference number</th>
+	    <th>Air route</th>
+	    <th>Air traveler</th>
+	    <th>User</th>
+	    <th>Billable</th>
+	    <th>Approved</th>
+	    <th>Business purpose</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
 
+	<% report.charges.each do |charge| %>
+	  <tr>
+	    <td><%= charge.cardholder %></td>
+	    <td><%= charge.date_of_charge %></td>
+	    <td><%= charge.description %></td>
+	    <td><%= charge.amount %></td>
+	    <td><%= charge.reference_number %></td>
+	    <td><%= charge.air_route %></td>
+	    <td><%= charge.air_traveler %></td>
+	    <td><%= charge.user_id %></td>
+	    <td><%= charge.billable %></td>
+	    <td><%= charge.approved %></td>
+	    <td><%= charge.business_purpose %></td>
+	    <td><%= link_to 'Show', charge %></td>
+	    <td><%= link_to 'Edit', edit_charge_path(charge) %></td>
+	    <td><%= link_to 'Destroy', charge, confirm: 'Are you sure?', method: :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+	</div>
+<% end %>
+</div>
 <br />
 
 <%= link_to 'New Report', new_report_path %>

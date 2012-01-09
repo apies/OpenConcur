@@ -1,3 +1,25 @@
 // Place all the styles related to the Reports controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#reportsListAll {
+  margin-bottom: 10px;
+}
+
+#reportsListAll h3
+{
+  margin:0;
+  padding:5px 0 5px 10px;
+  background-color:#94C5EB;
+  border-bottom:1px solid #fff;
+  color: #00314F;
+  font-weight:normal;
+}
+
+#reportsListAll div
+{
+  
+  background-color: #F4F4EE;
+  border-bottom:1px solid #fff;
+  position: relative;
+}
