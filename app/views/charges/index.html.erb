@@ -1,43 +1,37 @@
 <h1>Listing charges</h1>
 
-<table>
+<label for="filter">Filter</label>  
+<input type="text" name="filter" value="" id="filter" />
+
+<table id="box-table-a">
+<thead>
   <tr>
     <th>Cardholder</th>
     <th>Date of charge</th>
     <th>Description</th>
     <th>Amount</th>
-    <th>Reference number</th>
-    <th>Air route</th>
-    <th>Air traveler</th>
     <th>User</th>
-    <th>Report</th>
     <th>Billable</th>
     <th>Approved</th>
     <th>Business purpose</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
-
+</thead>
+<tbody >
 <% @charges.each do |charge| %>
   <tr>
-    <td><%= charge.cardholder %></td>
-    <td><%= charge.date_of_charge %></td>
+    <td id ="jtable"><%= charge.cardholder %></td>
+    <td id ="jtable"><%= charge.date_of_charge %></td>
     <td><%= charge.description %></td>
     <td><%= charge.amount %></td>
-    <td><%= charge.reference_number %></td>
-    <td><%= charge.air_route %></td>
-    <td><%= charge.air_traveler %></td>
     <td><%= charge.user_id %></td>
-    <td><%= link_to 'Show' , :controller => 'reports', :action => 'show', :id => charge.report.id  %></td>
     <td><%= charge.billable %></td>
     <td><%= charge.approved %></td>
     <td><%= charge.business_purpose %></td>
-    <td><%= link_to 'Show', charge %></td>
-    <td><%= link_to 'Edit', edit_charge_path(charge) %></td>
-    <td><%= link_to 'Destroy', charge, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Details', charge %></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />

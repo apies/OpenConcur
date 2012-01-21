@@ -6,12 +6,19 @@
 #$(document).ready(function () {
 
 $(document).ready ->
+	
+	
+	#reports index click header to show report table
 	$('#reportsListAll h3').next().hide()
 	
-	$('#reportsListAll h3').click -> 
-	  $(this).next().animate(
-		    { 'height': 'toggle' }, 'slow', 'easeOutBounce' )
+	#$('#reportsListAll h3').click -> 
+	#  $(this).next().animate(
+	#	    { 'height': 'toggle' }, 'slow', 'easeOutBounce' )
 	
+	$("#reportsListAll h3").click ->
+	  $(this).next().animate
+	    height: "toggle"
+	    "slow", "easeOutBounce"
 	
 	
 		

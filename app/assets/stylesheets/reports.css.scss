@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$grey: #F4F4EE;
+
 #reportsListAll {
   margin-bottom: 10px;
 }
@@ -19,7 +21,7 @@
 #reportsListAll div
 {
   
-  background-color: #F4F4EE;
+  background-color: $grey;
   border-bottom:1px solid #fff;
   position: relative;
 }

@@ -4,7 +4,7 @@
 <% @reports.each do |report| %>
 	<h3><%= report.cardholder + " " + number_to_currency(report.total_amount)  %></h3>
 	<div>
-	<table>
+	<table id="box-table-a">
 	  <tr>
 	    <th>Cardholder</th>
 	    <th>Date of charge</th>
