@@ -15,7 +15,7 @@
 //using the clever table code from http://net.tutsplus.com/tutorials/javascript-ajax/using-jquery-to-manipulate-and-filter-data/, will re-write in coffee script soon
 
 
-function zebraRows(selector, className)
+/*function zebraRows(selector, className)
 {
 	$(selector).removeClass(className).addClass(className);
 }
@@ -52,5 +52,5 @@ $(document).ready(function(){
   });  
 
 
-});
+}); */
 
