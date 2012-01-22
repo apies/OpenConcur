@@ -5,12 +5,12 @@
 	<h3><%= report.cardholder + " " + number_to_currency(report.total_amount)  %></h3>
 	<div>
 	<table id="box-table-a">
-	  <tr>
+	<thead>  
+	<tr>
 	    <th>Cardholder</th>
 	    <th>Date of charge</th>
 	    <th>Description</th>
 	    <th>Amount</th>
-	    <th>Reference number</th>
 	    <th>Air route</th>
 	    <th>Air traveler</th>
 	    <th>User</th>
@@ -19,16 +19,17 @@
 	    <th>Business purpose</th>
 	    <th></th>
 	    <th></th>
-	    <th></th>
+	    <th><label for="filter">Filter</label>  
+		<input type="text" name="filter" value="" id="filter" /></th>
 	  </tr>
-
+    </thead>
+    <tbody>
 	<% report.charges.each do |charge| %>
 	  <tr>
 	    <td><%= charge.cardholder %></td>
 	    <td><%= charge.date_of_charge %></td>
 	    <td><%= charge.description %></td>
 	    <td><%= charge.amount %></td>
-	    <td><%= charge.reference_number %></td>
 	    <td><%= charge.air_route %></td>
 	    <td><%= charge.air_traveler %></td>
 	    <td><%= charge.user_id %></td>
@@ -40,6 +41,7 @@
 	    <td><%= link_to 'Destroy', charge, confirm: 'Are you sure?', method: :delete %></td>
 	  </tr>
 	<% end %>
+	</tbody>
 	</table>
 	</div>
 <% end %>
