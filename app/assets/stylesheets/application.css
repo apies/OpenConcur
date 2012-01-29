@@ -163,21 +163,24 @@
     /*border-bottom: 1px solid #ccc; 
     border-top: 1px solid #ccc; */}
  .nav li {
-    float: left; }
+    float: left;
+     background-color: #909090;
+     border: 2px solid #242424;  
+}
  .nav li a {
     display: block;
     padding: 8px 15px;
     text-decoration: none;
     font-weight: bold;
-    background-color: #909090;
+   
     color: #069; 
     width: 100px;
     height: 40px;
     text-align: center;
-    border: 2px solid #242424; }
+    }
  .nav li a:hover {
     color: solid green ;
-    background-color: #fff; }
+     }
  /* End navigation bar styling. */
 
 
