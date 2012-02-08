@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet 
+    xmlns="http://www.w3.org/1999/xhtml"    
+    xmlns:rm="http://www.recommind.com/namespaces/servlet/2.0/"
+    xmlns:rmf="http://www.recommind.com/namespaces/servlet/2.0/functions" 
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    exclude-result-prefixes="#all" version="2.0"   <xsl:comment>MISSING CLOSING TAG</xsl:comment>
+
+    <xsl:template match="rm:field[name = 'mat_matter_status' and style = 'image']" priority="2"> closed
+        <xsl:element name="img" namespace="http://www.w3.org/1999/xhtml">  closed
+            <xsl:attribute name="src">  closed
+                <xsl:choose> <xsl:comment>MISSING CLOSING TAG</xsl:comment>
+                    <xsl:when test="contains(normalize-space(.),'O')"> closed
+                        <xsl:text>ui3.0/modules/mne/imgs/folder_green_open.gif <xsl:comment>MISSING CLOSING TAG</xsl:comment>
+                    </xsl:when>
+                    <xsl:otherwise> closed
+                        <xsl:text>ui3.0/modules/mne/imgs/folder_grey_closed.gif</xsl:text>
+                    </xsl:otherwise>
+            </xsl:attribute>
+            <xsl:attribute name="alt" select="concat('Status: ',.)"/>  <xsl:comment>Syntax Error, Missing beggining bracket</xsl:comment>
+	    <xsl:attribute name="title" select="concat('Status: ',.)"><xsl:comment>Missing Closing tag and content</xsl:comment>
+        </xsl:element>
+    </xsl:template>
+
+408 324 2850
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet 
+    xmlns="http://www.w3.org/1999/xhtml"    
+    xmlns:rm="http://www.recommind.com/namespaces/servlet/2.0/"
+    xmlns:rmf="http://www.recommind.com/namespaces/servlet/2.0/functions" 
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    exclude-result-prefixes="#all" version="2.0">  
+</xsl:stylesheet>
+    <xsl:template match="rm:field[name = 'mat_matter_status' and style = 'image']" priority="2"> 
+        <xsl:element name="img" namespace="http://www.w3.org/1999/xhtml">  c
+            <xsl:attribute name="src">  
+                <xsl:choose> 
+                    <xsl:when test="contains(normalize-space(.),'O')"> closed
+                        <xsl:text>ui3.0/modules/mne/imgs/folder_green_open.gif <xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise> 
+                        <xsl:text>ui3.0/modules/mne/imgs/folder_grey_closed.gif</xsl:text>
+                    </xsl:otherwise>
+                    </xsl:choose> 
+            </xsl:attribute>
+            <xsl:attribute name="alt" select="concat('Status: ',.)"/>  
+	    <xsl:attribute name="title" select="concat('Status: ',.)"/>
+        </xsl:element>
+    </xsl:template>
