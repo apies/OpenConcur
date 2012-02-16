@@ -11,16 +11,16 @@ appleFilter = (selector, query) ->
 		    $(@).show().addClass('visible')
 		
 $(document).ready ->
-	zebraRows '#box-table-a tbody tr:odd td', 'odd'
+	zebraRows '.box-table-a tbody tr:odd td', 'odd'
 	
-	$('#box-table-a tbody tr').addClass('visible')
+	$('.box-table-a tbody tr').addClass('visible')
 	
-	$('#filter').keyup (event) ->
+	$('.filter').keyup (event) ->
 		if event.key is 27 || $(@).val() is ''
 			$(@).val('')
-			$('#box-table-a tbody tr').removeClass('visible').show().addClass('visible')
+			$('.box-table-a tbody tr').removeClass('visible').show().addClass('visible')
 		else
-		    appleFilter '#box-table-a tbody tr', $(@).val()
+		    appleFilter '.box-table-a tbody tr', $(@).val()
 		
 		$('.visible td').removeClass('odd')
 		zebraRows '.visible:odd td', 'odd'
